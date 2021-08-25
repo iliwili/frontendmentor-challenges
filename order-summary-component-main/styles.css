@@ -1,0 +1,156 @@
+:root {
+  --clr-pale-blue: hsl(225, 100%, 94%);
+  --clr-bright-blue: hsl(245, 75%, 52%);
+
+  --clr-very-pale-blue: hsl(225, 100%, 98%);
+  --clr-desaturated-blue: hsl(224, 23%, 55%);
+  --clr-dark-blue: hsl(223, 47%, 23%);
+
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-black: hsl(0, 0%, 0%);
+
+  --clr-font-size: 16px;
+  --clr-font-family: "Red Hat Display", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-image: url("./images/pattern-background-desktop.svg");
+  background-repeat: repeat-x;
+  background-color: var(--clr-pale-blue);
+  font-family: var(--clr-font-family);
+  font-size: var(--clr-font-size);
+  margin: 0;
+}
+
+main {
+  height: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 28rem;
+  background-color: var(--clr-white);
+  border-radius: 20px;
+  text-align: center;
+}
+
+.card-header {
+  height: 200px;
+}
+
+.card-header img {
+  border-radius: 20px 20px 0px 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.card-content {
+  padding: 2rem 3rem;
+}
+
+.card-body .title {
+  font-weight: 900;
+  color: var(--clr-dark-blue);
+  margin: 0;
+}
+
+.card-body .desc {
+  color: var(--clr-desaturated-blue);
+}
+
+.plan {
+  flex-direction: row;
+  background-color: var(--clr-very-pale-blue);
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.plan a:last-child {
+  margin-left: auto;
+}
+
+.icon {
+  width: 36px;
+  height: 36px;
+  margin-right: 15px;
+}
+
+.sub {
+  flex-direction: column;
+  color: var(--clr-desaturated-blue);
+  font-size: 12px;
+}
+
+.plan-title {
+  font-size: 14px;
+  font-weight: 900;
+  margin-bottom: 0.2rem;
+  color: var(--clr-dark-blue);
+}
+
+.plan a {
+  font-size: 14px;
+  font-weight: 900;
+  color: var(--clr-bright-blue);
+  cursor: pointer;
+}
+
+.plan a:hover {
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+button.accept {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  width: 100%;
+  height: 45px;
+  border-radius: 10px;
+  color: var(--clr-white);
+  background-color: var(--clr-bright-blue);
+  font-weight: 700;
+  border: none;
+  box-shadow: 0px 2px 20px 0px rgba(56, 41, 224, 0.47);
+  cursor: pointer;
+}
+
+button.accept:hover {
+  opacity: 0.6;
+}
+
+a.cancel {
+  margin-top: 2rem;
+  text-decoration: none;
+  color: var(--clr-dark-blue);
+  font-weight: 900;
+  opacity: 0.6;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+a.cancel:hover {
+  opacity: 1;
+}
+
+@media screen and (max-width: 40em) {
+  .card {
+    width: 22rem;
+  }
+  .card-content {
+    padding: 1.5rem;
+  }
+}
