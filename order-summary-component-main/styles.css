@@ -9,13 +9,13 @@
   --clr-white: hsl(0, 0%, 100%);
   --clr-black: hsl(0, 0%, 0%);
 
-  --clr-font-size: 16px;
   --clr-font-family: "Red Hat Display", sans-serif;
 }
 
 html,
 body {
   height: 100%;
+  font-size: 16px;
 }
 
 body {
@@ -23,7 +23,6 @@ body {
   background-repeat: repeat-x;
   background-color: var(--clr-pale-blue);
   font-family: var(--clr-font-family);
-  font-size: var(--clr-font-size);
   margin: 0;
 }
 
@@ -43,7 +42,8 @@ main {
 .card {
   width: 28rem;
   background-color: var(--clr-white);
-  border-radius: 20px;
+  border-radius: 1.25rem;
+  overflow: hidden;
   text-align: center;
 }
 
@@ -52,7 +52,6 @@ main {
 }
 
 .card-header img {
-  border-radius: 20px 20px 0px 0px;
   width: 100%;
   height: 100%;
 }
@@ -75,7 +74,7 @@ main {
   flex-direction: row;
   background-color: var(--clr-very-pale-blue);
   padding: 1rem;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   text-align: left;
 }
 
@@ -92,18 +91,18 @@ main {
 .sub {
   flex-direction: column;
   color: var(--clr-desaturated-blue);
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .plan-title {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 900;
   margin-bottom: 0.2rem;
   color: var(--clr-dark-blue);
 }
 
 .plan a {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 900;
   color: var(--clr-bright-blue);
   cursor: pointer;
@@ -119,13 +118,14 @@ button.accept {
   margin-bottom: 25px;
   width: 100%;
   height: 45px;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   color: var(--clr-white);
   background-color: var(--clr-bright-blue);
   font-weight: 700;
   border: none;
-  box-shadow: 0px 2px 20px 0px rgba(56, 41, 224, 0.47);
+  box-shadow: 0 2px 5px #00000033;
   cursor: pointer;
+  font-size: 0.875rem;
 }
 
 button.accept:hover {
@@ -138,7 +138,7 @@ a.cancel {
   color: var(--clr-dark-blue);
   font-weight: 900;
   opacity: 0.6;
-  font-size: 14px;
+  font-size: 0.875rem;
   cursor: pointer;
 }
 
