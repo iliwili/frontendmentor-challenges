@@ -19,6 +19,7 @@ body {
 
 body {
   margin: 0;
+  padding: 0.5rem 0;
   box-sizing: border-box;
   font-family: var(--ff-lexend-deca);
   background-color: var(--clr-very-dark-blue);
@@ -65,6 +66,8 @@ body {
 }
 
 .stats {
+  list-style-type: none;
+  padding: 0;
   margin-top: 4rem;
   display: flex;
   justify-content: space-between;
