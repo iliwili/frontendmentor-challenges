@@ -1,0 +1,127 @@
+:root {
+  /* Primary */
+  --clr-bright-orange: hsl(31, 77%, 52%);
+  --clr-dark-cyan: hsl(184, 100%, 22%);
+  --clr-very-dark-cyan: hsl(179, 100%, 13%);
+
+  /* Neutral */
+  --clr-transparent-white: hsla(0, 0%, 100%, 0.75);
+  --clr-very-light-gray: hsl(0, 0%, 95%);
+
+  --ff-lexend-deca: "Lexend Deca", sans-serif;
+  --ff-big-shoulders-display: "Big Shoulders Display", cursive;
+}
+
+html {
+  font-size: 15px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0.5rem 0;
+  box-sizing: border-box;
+  font-family: var(--ff-lexend-deca);
+  background-color: var(--clr-very-light-gray);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 307px 307px 307px;
+  grid-template-rows: 500px;
+  justify-items: stretch;
+  border-radius: 0.533rem;
+  overflow: hidden;
+  background-color: var(--clr-bright-orange);
+}
+
+.column {
+  padding: 3rem;
+}
+
+.suv {
+  background-color: var(--clr-dark-cyan);
+  border-radius: 0.533rem;
+}
+
+.luxury {
+  background-color: var(--clr-very-dark-cyan);
+}
+
+.title {
+  font-family: var(--ff-big-shoulders-display);
+  font-weight: bold;
+  font-size: 2.667rem;
+  color: var(--clr-very-light-gray);
+  text-transform: uppercase;
+}
+
+.desc {
+  line-height: 1.667rem;
+  color: var(--clr-transparent-white);
+  max-width: 212px;
+}
+
+.more {
+  margin-top: 5rem;
+  width: 146px;
+  height: 48px;
+  border: 0;
+  border-radius: 25px;
+  line-height: 1.667rem;
+  font-family: var(--ff-lexend-deca);
+  font-size: 1rem;
+  background-color: var(--clr-very-light-gray);
+  cursor: pointer;
+}
+
+.sedan .more {
+  color: var(--clr-bright-orange);
+}
+
+.suv .more {
+  color: var(--clr-dark-cyan);
+}
+
+.luxury .more {
+  color: var(--clr-very-dark-cyan);
+}
+
+.more:hover {
+  border-color: var(--clr-very-light-gray);
+  border-style: solid;
+  border-width: 2px;
+  background-color: transparent;
+  color: var(--clr-very-light-gray);
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    align-items: baseline;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 327px;
+    grid-template-rows: 442px 442px 442px;
+    overflow: hidden;
+  }
+
+  .desc {
+    max-width: 231px;
+  }
+
+  .more {
+    margin-top: 1.5rem;
+  }
+}
