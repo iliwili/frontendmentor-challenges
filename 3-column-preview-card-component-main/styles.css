@@ -43,16 +43,18 @@ body {
   justify-items: stretch;
   border-radius: 0.533rem;
   overflow: hidden;
-  background-color: var(--clr-bright-orange);
 }
 
 .column {
   padding: 3rem;
 }
 
+.sedan {
+  background-color: var(--clr-bright-orange);
+}
+
 .suv {
   background-color: var(--clr-dark-cyan);
-  border-radius: 0.533rem;
 }
 
 .luxury {
@@ -78,7 +80,7 @@ body {
   width: 146px;
   height: 48px;
   border: 0;
-  border-radius: 25px;
+  border-radius: 1.667rem;
   line-height: 1.667rem;
   font-family: var(--ff-lexend-deca);
   font-size: 1rem;
