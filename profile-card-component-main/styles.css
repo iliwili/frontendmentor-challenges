@@ -98,7 +98,7 @@ hr {
   text-align: center;
 }
 
-.stats h3 {
+.stats h1 {
   font-size: 1rem;
   color: var(--clr-very-dark-desaturated-blue);
   padding-bottom: 0.45rem;
