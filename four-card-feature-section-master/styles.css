@@ -45,12 +45,12 @@ body {
   padding: 2rem;
   text-align: center;
   margin: 2rem 0;
+  color: var(--clr-very-dark-blue);
 }
 
 .title {
   font-size: 24px;
   font-weight: 200;
-  color: var(--clr-very-dark-blue);
   letter-spacing: 0.17px;
   margin-bottom: 0.785rem;
 }
@@ -63,7 +63,7 @@ body {
   line-height: 25px;
   letter-spacing: 0.1px;
   text-align: center;
-  color: var(--clr-very-dark-blue);
+  opacity: 0.5;
 }
 
 .cards {
@@ -115,6 +115,7 @@ body {
   font-size: 13px;
   line-height: 23px;
   letter-spacing: 0.09px;
+  opacity: 0.5;
 }
 
 .card-image {
