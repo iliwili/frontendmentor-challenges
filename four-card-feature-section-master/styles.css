@@ -35,6 +35,7 @@ body {
 
 body {
   font-family: var(--ff-poppins);
+  background-color: var(--clr-very-light-gray);
 }
 
 .container {
