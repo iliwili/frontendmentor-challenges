@@ -1,0 +1,166 @@
+:root {
+  /* Colors */
+  /* Primary */
+  --clr-red: hsl(0, 78%, 62%);
+  --clr-cyan: hsl(180, 62%, 55%);
+  --clr-orange: hsl(34, 97%, 64%);
+  --clr-blue: hsl(212, 86%, 64%);
+
+  /* Neutral */
+  --clr-very-dark-blue: hsl(232, 12%, 34%);
+  --clr-grayish-blue: hsl(229, 6%, 66%);
+  --clr-very-light-gray: hsl(0, 0%, 98%);
+
+  /* Card shadow */
+  --clr-card-shadow: rgba(131, 166, 210, 50%);
+
+  /* Fonts */
+  --ff-poppins: "Poppins", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 15px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--ff-poppins);
+}
+
+.container {
+  height: 100%;
+}
+
+.header-container {
+  padding: 2rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 200;
+  color: var(--clr-very-dark-blue);
+  letter-spacing: 0.17px;
+  margin-bottom: 0.785rem;
+}
+
+.semi {
+  font-weight: 600;
+}
+
+.desc {
+  line-height: 25px;
+  letter-spacing: 0.1px;
+  text-align: center;
+  color: var(--clr-very-dark-blue);
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.card {
+  position: relative;
+  padding: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 15px 30px -11px var(--clr-card-shadow);
+  color: var(--clr-very-dark-blue);
+  margin-bottom: 2rem;
+}
+
+.card-border {
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card-border.cyan {
+  background-color: var(--clr-cyan);
+}
+
+.card-border.red {
+  background-color: var(--clr-red);
+}
+
+.card-border.orange {
+  background-color: var(--clr-orange);
+}
+
+.card-border.blue {
+  background-color: var(--clr-blue);
+}
+
+.card h1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.card p {
+  font-size: 13px;
+  line-height: 23px;
+  letter-spacing: 0.09px;
+}
+
+.card-image {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.card-image img {
+  width: 57px;
+  height: 57px;
+  float: right;
+}
+
+@media screen and (min-width: 375px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header-container {
+    width: 540px;
+    margin: 0;
+  }
+
+  .title {
+    font-size: 36px;
+    letter-spacing: 0.25px;
+  }
+
+  .cards {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    width: 350px;
+  }
+
+  .left {
+    margin-right: 2rem;
+  }
+
+  .right {
+    margin-left: 2rem;
+  }
+}
