@@ -1,0 +1,268 @@
+:root {
+  /* Colors */
+  /* Primary */
+  --clr-desaturated-red: hsl(0, 36%, 70%);
+  --clr-soft-red: hsl(0, 92%, 68%);
+
+  /* Neutral */
+  --clr-dark-grayish-red: hsl(0, 7%, 24%);
+
+  /* Gradients */
+  --clr-linear-gradient1: linear-gradient(
+    135deg,
+    hsl(0, 0%, 100%),
+    hsl(0, 100%, 98%)
+  );
+  --clr-linear-gradient2: linear-gradient(
+    135deg,
+    hsl(0, 80%, 86%),
+    hsl(0, 74%, 74%)
+  );
+
+  /* Shadow */
+  --clr-shadow-button: rgba(198, 110, 110, 24.76%);
+
+  /* Font */
+  --ff-josefin-sans: "Josefin Sans", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 15px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--ff-josefin-sans);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background: var(--clr-linear-gradient1);
+}
+
+.right {
+  display: none;
+}
+
+.header {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+}
+
+.header img {
+  width: 100px;
+  height: 20px;
+}
+
+.mob-image {
+  width: 100%;
+  height: 100%;
+}
+
+.desk-image {
+  display: none;
+}
+
+.content {
+  margin-top: 2.5rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 10.83px;
+  line-height: 42px;
+}
+
+h1:first-of-type {
+  font-weight: 300;
+  color: var(--clr-desaturated-red);
+}
+
+.desc {
+  margin-top: 1rem;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0px;
+  color: var(--clr-desaturated-red);
+}
+
+.input-group {
+  margin-top: 2rem;
+  position: relative;
+}
+
+input {
+  width: 100%;
+  border-radius: 28px;
+  height: 48px;
+  padding: 1rem 1.5rem;
+  background-color: transparent;
+
+  border: none;
+  border-color: var(--clr-desaturated-red);
+  border-width: 1px;
+  border-style: solid;
+
+  font-family: var(--ff-josefin-sans);
+  font-size: 14px;
+  color: var(--clr-dark-grayish-red);
+}
+
+input:focus {
+  outline: none;
+}
+
+input::placeholder {
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 0px;
+  color: var(--clr-desaturated-red);
+}
+
+.error input {
+  border-color: var(--clr-soft-red);
+  border-width: 2px;
+
+  background-image: url(./images/icon-error.svg);
+  background-repeat: no-repeat;
+  background-position: 72% 50%;
+}
+
+button {
+  cursor: pointer;
+  width: 64px;
+  height: 48px;
+  border-radius: 28px;
+  background: var(--clr-linear-gradient2);
+
+  border: none;
+  border-color: var(--clr-desaturated-red);
+  border-width: 0px;
+  border-style: solid;
+
+  box-shadow: 0px 15px 20px var(--clr-shadow-button);
+  z-index: 3;
+}
+
+button:hover {
+  background: linear-gradient(135deg, hsl(0, 90%, 90%), hsl(0, 90%, 90%));
+}
+
+.input-group button {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.error-text {
+  display: none;
+  position: absolute;
+  bottom: -45%;
+  left: 7%;
+
+  font-size: 13px;
+  color: var(--clr-soft-red);
+  letter-spacing: 0px;
+}
+
+.error .error-text {
+  display: block;
+}
+
+@media screen and (min-width: 375px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    box-shadow: 0px 5px 20px var(--clr-shadow-button);
+    overflow: hidden;
+    border-radius: 15px;
+  }
+
+  .header img {
+    width: 158px;
+    height: 33px;
+  }
+
+  .mob-image {
+    width: 376px;
+    height: 250px;
+  }
+
+  .container {
+    width: 375px;
+    height: 800px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .container {
+    flex-direction: row;
+    width: 1440px;
+    height: 800px;
+  }
+
+  .left {
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    padding: 4rem 12rem 4rem 8rem;
+  }
+
+  .right {
+    display: block;
+  }
+
+  .desk-image {
+    display: block;
+  }
+
+  .mob-image {
+    display: none;
+  }
+
+  .content {
+    margin-top: 6rem;
+    text-align: left;
+    padding: 3rem 4rem 3rem 2rem;
+  }
+
+  h1 {
+    font-size: 64px;
+    letter-spacing: 17.32px;
+    line-height: 64px;
+  }
+
+  .desc {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  input {
+    height: 56px;
+  }
+
+  button {
+    width: 100px;
+    height: 56px;
+  }
+}
