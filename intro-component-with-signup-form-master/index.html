@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="container">
+    <div class="intro">
+      <h1>Learn to code by watching others</h1>
+
+      <p class="desc">
+        See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable. 
+      </p>
+    </div>
+    <div class="trial">
+      <div class="info">
+        <p><strong>Try it free 7 days</strong> then $20/mo. thereafter</p>
+      </div>
+
+      <form id="signUpForm" novalidate>
+        <div class="input-group">
+          <input type="text" name="firstName" id="sgn_fst_name" placeholder="First Name">
+          <span class="err-text"></span>
+        </div>
+
+        <div class="input-group">
+          <input type="text" name="lastName" id="sgn_lst_name" placeholder="Last Name">
+          <span class="err-text"></span>
+        </div>
+
+        <div class="input-group">
+          <input type="email" name="email" id="sgn_email" placeholder="Email Address">
+          <span class="err-text"></span>
+        </div>
+
+        <div class="input-group">
+          <input type="password" name="password" id="sgn_pass" placeholder="Password">
+          <span class="err-text"></span>
+        </div>
+        
+        <button type="submit" aria-label="Claim your free trial">Claim your free trial</button>
+  
+        <div class="form-footer">
+          <p>By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></p>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <script src="./index.js"></script>
+</body>
+</html>
