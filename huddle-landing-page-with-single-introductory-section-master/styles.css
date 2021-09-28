@@ -1,0 +1,212 @@
+:root {
+  /* Colors */
+  /* Primary */
+  --clr-violet: hsl(257, 40%, 49%);
+  --clr-soft-magenta: hsl(300, 69%, 71%);
+  --clr-white: hsl(0, 100%, 100%);
+
+  /* Shadow */
+  --sh-button: 1px 3px 5px 0 rgba(0, 0, 0, 0.269);
+
+  /* Typography */
+  /* Family */
+  /* Header */
+  --ff-poppins: "Poppins", sans-serif;
+
+  /* Body */
+  --ff-open-sans: "Open Sans", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-image: url(./images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-color: var(--clr-violet);
+}
+header {
+  margin: 2rem 2.5rem 3.5rem 2.5rem;
+}
+.header__logo {
+  width: 120px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 3.5rem 2.5rem;
+}
+
+.mockups img {
+  width: 296px;
+  height: 209px;
+}
+
+.community {
+  text-align: center;
+  font-family: var(--ff-open-sans);
+  margin-top: 4rem;
+}
+
+.community h1 {
+  font-size: 24px;
+  font-weight: 600;
+  font-family: var(--ff-poppins);
+  line-height: 36px;
+  color: var(--clr-white);
+}
+
+.community p {
+  margin: 1rem 0 2rem 0;
+
+  line-height: 24px;
+  color: var(--clr-white);
+}
+
+.community button {
+  background-color: var(--clr-white);
+  width: 200px;
+  height: 40px;
+
+  outline: none;
+  border: none;
+  border-radius: 20px;
+
+  color: var(--clr-violet);
+  font-size: 12px;
+  line-height: 18px;
+
+  box-shadow: var(--sh-button);
+  cursor: pointer;
+}
+
+.community button:hover {
+  background-color: var(--clr-soft-magenta);
+  color: var(--clr-white);
+}
+
+.footer__logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  list-style: none;
+}
+
+.footer__logos li {
+  border-color: var(--clr-white);
+  border-width: 0.8px;
+  border-style: solid;
+  border-radius: 50%;
+}
+
+.footer__logos li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+
+  text-decoration: none;
+}
+
+.footer__logos li:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+ion-icon {
+  font-size: 16px;
+  color: var(--clr-white);
+}
+
+.footer__logos li:hover {
+  border-color: var(--clr-soft-magenta);
+}
+
+.footer__logos li:hover ion-icon {
+  color: var(--clr-soft-magenta);
+}
+
+@media screen and (min-width: 375px) {
+  body {
+    background-image: url(./images/bg-desktop.svg);
+    background-size: cover;
+  }
+
+  .mockups img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  header {
+    margin: 3rem 5rem;
+  }
+
+  .header__logo {
+    width: 200px;
+  }
+
+  main {
+    flex-direction: row;
+    margin: 5rem 5rem;
+  }
+
+  .mockups {
+    width: 55%;
+  }
+
+  .mockups img {
+    width: 100%;
+  }
+
+  .community {
+    width: 45%;
+    text-align: left;
+    margin: 2rem 3rem;
+  }
+
+  .community h1 {
+    font-size: 40px;
+    line-height: 60px;
+  }
+
+  .community p {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .community button {
+    width: 200px;
+    height: 56px;
+
+    border-radius: 28px;
+
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .footer__logos {
+    justify-content: right;
+    margin: 0 6rem;
+  }
+
+  .footer__logos li a {
+    width: 40px;
+    height: 40px;
+  }
+
+  ion-icon {
+    font-size: 20px;
+  }
+}
