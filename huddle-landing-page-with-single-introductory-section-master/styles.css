@@ -72,10 +72,9 @@ main {
   color: var(--clr-white);
 }
 
-.community button {
+.community a {
   background-color: var(--clr-white);
-  width: 200px;
-  height: 40px;
+  padding: 0.8rem 5rem;
 
   outline: none;
   border: none;
@@ -87,11 +86,18 @@ main {
 
   box-shadow: var(--sh-button);
   cursor: pointer;
+  text-decoration: none;
 }
 
-.community button:hover {
+.community a:hover {
   background-color: var(--clr-soft-magenta);
   color: var(--clr-white);
+}
+
+.community a:focus-visible {
+  border-color: var(--clr-soft-magenta);
+  border-width: 2px;
+  border-style: dashed;
 }
 
 .footer__logos {
@@ -123,17 +129,36 @@ main {
   margin-right: 0.5rem;
 }
 
-ion-icon {
-  font-size: 16px;
-  color: var(--clr-white);
+.footer__logos li a svg {
+  width: 16px;
+  height: 16px;
+  fill: white;
 }
 
 .footer__logos li:hover {
   border-color: var(--clr-soft-magenta);
 }
 
-.footer__logos li:hover ion-icon {
-  color: var(--clr-soft-magenta);
+.footer__logos li:hover a svg {
+  fill: var(--clr-soft-magenta);
+}
+
+.footer__logos li a:focus-visible {
+  border-radius: 50%;
+  border-color: var(--clr-soft-magenta);
+  border-width: 2px;
+  border-style: dashed;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 @media screen and (min-width: 375px) {
@@ -158,20 +183,15 @@ ion-icon {
   }
 
   main {
-    flex-direction: row;
     margin: 5rem 5rem;
   }
 
-  .mockups {
-    width: 55%;
-  }
-
   .mockups img {
-    width: 100%;
+    max-width: 700px;
+    max-height: 500px;
   }
 
   .community {
-    width: 45%;
     text-align: left;
     margin: 2rem 3rem;
   }
@@ -186,9 +206,8 @@ ion-icon {
     line-height: 27px;
   }
 
-  .community button {
-    width: 200px;
-    height: 56px;
+  .community a {
+    padding: 1rem 5rem;
 
     border-radius: 28px;
 
@@ -197,16 +216,41 @@ ion-icon {
   }
 
   .footer__logos {
-    justify-content: right;
-    margin: 0 6rem;
+    padding: 0 0 2rem 0;
   }
 
   .footer__logos li a {
     width: 40px;
     height: 40px;
+    outline: none;
   }
 
-  ion-icon {
-    font-size: 20px;
+  .footer__logos li a svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  main {
+    margin: 5rem 5rem 12rem 5rem;
+    flex-direction: row;
+  }
+
+  .mockups {
+    width: 50%;
+  }
+
+  .mockups img {
+    width: 100%;
+  }
+
+  .community {
+    width: 50%;
+  }
+
+  .footer__logos {
+    justify-content: right;
+    margin: 0 6rem;
   }
 }
