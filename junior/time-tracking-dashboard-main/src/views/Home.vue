@@ -1,6 +1,6 @@
 <template>
   <main>
-    <article class="report">
+    <div class="report">
       <div class="report__header">
         <div class="user-card">
           <img
@@ -25,7 +25,7 @@
           </li>
         </ul>
       </div>
-    </article>
+    </div>
 
     <div class="stats">
       <div
