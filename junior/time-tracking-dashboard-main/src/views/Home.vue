@@ -27,8 +27,8 @@
       </div>
     </article>
 
-    <section class="stats">
-      <article
+    <div class="stats">
+      <div
         v-for="(stat, index) in stats"
         :key="index"
         class="subject"
@@ -52,8 +52,8 @@
             </p>
           </div>
         </div>
-      </article>
-    </section>
+      </div>
+    </div>
   </main>
 </template>
 
