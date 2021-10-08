@@ -1,0 +1,70 @@
+body.dark {
+  background-color: var(--clr-very-dark-blue);
+  color: var(--clr-white);
+}
+
+.dark h1 {
+  color: var(--clr-white);
+}
+
+.dark h2 {
+  color: var(--clr-white);
+}
+
+.dark .header__button .sun {
+  display: block;
+}
+
+.dark .header__button .moon {
+  display: none;
+}
+
+.dark .header__button {
+  color: var(--clr-white);
+}
+
+.dark .header__button svg {
+  fill: var(--clr-white);
+}
+
+.dark .header__button:hover {
+  color: rgba(144, 164, 212, 1);
+}
+
+.dark .header__button:hover svg {
+  fill: rgba(144, 164, 212, 1);
+}
+
+.dark .input-group {
+  background-color: var(--clr-dark-desaturated-blue);
+  box-shadow: none;
+}
+
+.dark input {
+  color: var(--clr-white);
+}
+
+.dark input::placeholder {
+  color: var(--clr-white);
+}
+
+.dark .gh__info {
+  background-color: var(--clr-dark-desaturated-blue);
+  box-shadow: none;
+}
+
+.dark .user-info__joined {
+  color: var(--clr-white);
+}
+
+.dark .gh_info__stats {
+  background-color: var(--clr-very-dark-blue);
+}
+
+.dark .gh_info__extra-info li svg {
+  fill: var(--clr-white);
+}
+
+.dark .gh_info__extra-info li a {
+  color: var(--clr-white);
+}

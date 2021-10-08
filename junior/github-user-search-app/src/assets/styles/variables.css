@@ -1,0 +1,26 @@
+:root {
+  /* Colors */
+  /* Primary */
+  --clr-blue: hsl(212, 100%, 50%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-red: hsl(0, 91%, 62%);
+
+  /* Light Mode */
+  --clr-grayish-blue: hsl(217, 20%, 51%);
+  --clr-desautareted-blue: hsl(217, 35%, 45%);
+  --clr-dark-blue: hsl(217, 21%, 21%);
+  --clr-saturated-white: hsl(227, 100%, 98%);
+
+  /* Dark Mode */
+  --clr-very-dark-blue: hsl(220, 40%, 13%);
+  --clr-dark-desaturated-blue: hsl(222, 41%, 20%);
+
+  /* Hover */
+  --clr-hover-blue: hsl(212, 100%, 69%);
+
+  /* Shadow */
+  --sh-box: 0px 16px 30px -10px rgba(70, 96, 187, 0.1986);
+
+  /* Typography */
+  --ff-space-mono: "Space Mono", monospace;
+}
