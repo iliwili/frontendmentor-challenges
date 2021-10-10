@@ -2,6 +2,33 @@ import Logo from "./assets/images/logo.svg";
 
 import { useState } from "react";
 
+const inputs = document.getElementsByTagName("input");
+
+for (let elem of inputs) {
+  elem.addEventListener("keypress", function (e) {
+    if (isNaN(parseInt(e.key))) {
+      if (
+        (e.key !== "." && e.key !== ",") ||
+        containsFractional(e.target) ||
+        e.target.id === "num-people"
+      ) {
+        e.preventDefault();
+      }
+    }
+
+    if (
+      containsFractional(e.target) &&
+      e.target.value.split(".")[1].length > 1
+    ) {
+      e.preventDefault();
+    }
+  });
+}
+
+function containsFractional(input) {
+  return input.value.includes(".") || input.value.includes(",");
+}
+
 function App() {
   const [bill, setBill] = useState("");
   const [tip, setTip] = useState("");
@@ -65,6 +92,7 @@ function App() {
       setTipAmount(tipAmount);
     }
   };
+
   return (
     <main>
       <img className="logo" src={Logo} alt="logo" />
