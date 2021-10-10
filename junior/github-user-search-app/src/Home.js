@@ -79,7 +79,7 @@ function App() {
 
   return (
     <main>
-      <section className="gh__section">
+      <section>
         <header className="flex justify-space-between items-center">
           <h1 className="header__title">devfinder</h1>
           <button

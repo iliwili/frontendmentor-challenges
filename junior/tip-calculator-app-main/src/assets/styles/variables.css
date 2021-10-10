@@ -1,0 +1,25 @@
+:root {
+  /* Colors */
+
+  /* Primary */
+  --clr-strong-cyan: hsl(172, 67%, 45%);
+
+  /* Neutral */
+  --clr-very-dark-cyan: hsl(183, 100%, 15%);
+  --clr-title-dark-grayish-cyan: hsl(186, 14%, 43%);
+  --clr-dark-grayish-cyan: hsl(184, 14%, 56%);
+  --clr-bd-light-grayish-cyan: hsl(185, 41%, 84%);
+  --clr-bg-light-grayish-cyan: hsl(189, 41%, 97%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-red: hsl(13, 70%, 60%);
+
+  /* Grid Input */
+  --clr-grid-inpt: hsl(180, 18, 40);
+
+  /* Typography */
+  /* Body Copy */
+  --ff-body-size: 24px;
+
+  /* Font */
+  --ff-space-mono: "Space Mono", monospace;
+}

@@ -1,0 +1,260 @@
+@import "./variables.css";
+@import "./general.css";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  font-size: var(--ff-body-size);
+}
+
+body {
+  font-family: var(--ff-space-mono);
+  background-color: var(--clr-bd-light-grayish-cyan);
+}
+
+#app {
+  height: 100%;
+  text-align: center;
+}
+
+.logo {
+  margin: 2rem 0;
+}
+
+section {
+  background-color: var(--clr-white);
+  border-radius: 25px 25px 0 0;
+  box-shadow: 0px 32px 43px 0 rgba(79, 166, 175, 0.2007);
+
+  padding-bottom: 1.4rem;
+}
+
+.calculations {
+  padding: 1.4rem 1.4rem 0 1.4rem;
+}
+
+.input-group {
+  position: relative;
+  background-color: var(--clr-bg-light-grayish-cyan);
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.bill input {
+  background-image: url(../images/icon-dollar.svg);
+}
+
+.input-group.error input {
+  border-color: var(--clr-red);
+  border-width: 2px;
+  border-style: solid;
+}
+
+.error-text {
+  position: absolute;
+  display: none;
+  top: -70%;
+  right: 0%;
+
+  color: var(--clr-red);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.input-group.error .error-text {
+  display: block;
+}
+
+.tip {
+  margin-top: 1rem;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-rows: 48px 48px 48px;
+  grid-template-columns: 145px 145px;
+  row-gap: 0.7rem;
+  column-gap: 0.7rem;
+}
+
+.tips-grid button {
+  padding: 0.15rem;
+  background-color: var(--clr-very-dark-cyan);
+
+  color: var(--clr-white);
+  font-size: 24px;
+}
+
+.tips-grid button:focus-visible {
+  border-color: rgba(159, 232, 223, 1);
+  border-width: 2px;
+  border-style: solid;
+}
+
+.tips-grid button:hover {
+  background-color: rgba(159, 232, 223, 1);
+  color: var(--clr-very-dark-cyan);
+}
+
+.tips-grid button.active {
+  background-color: var(--clr-strong-cyan);
+  color: var(--clr-very-dark-cyan);
+}
+
+.tips-grid button.active:focus-visible {
+  border-color: var(--clr-very-dark-cyan);
+  border-width: 2px;
+  border-style: solid;
+}
+
+.tip input::placeholder {
+  color: var(--clr-grid-inpt);
+  opacity: 0.65;
+}
+
+.tips-grid .input-group {
+  height: 100%;
+}
+
+.tips-grid input {
+  height: 100%;
+  padding: 0.6rem;
+}
+
+.people {
+  margin-top: 1rem;
+}
+
+.people input {
+  background-image: url(../images/icon-person.svg);
+}
+
+.overview {
+  background-color: var(--clr-very-dark-cyan);
+
+  margin: 1.5rem 1rem 0rem 1rem;
+  padding: 1.5rem 1rem 1rem 1rem;
+
+  border-radius: 15px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info:nth-child(2) {
+  margin-top: 1rem;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.text h6 {
+  color: var(--clr-white);
+  margin: 0;
+}
+
+.text span {
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--clr-dark-grayish-cyan);
+}
+
+.amount span {
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: -0.67px;
+  color: var(--clr-strong-cyan);
+}
+
+.overview button {
+  background-color: var(--clr-strong-cyan);
+  margin-top: 1.5rem;
+  padding: 0.4rem;
+
+  color: var(--clr-very-dark-cyan);
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.overview button:focus-visible {
+  border-color: var(--clr-dark-grayish-cyan);
+  border-width: 2px;
+  border-style: solid;
+}
+
+.overview button:hover {
+  background-color: hsla(172, 61%, 77%, 1);
+}
+
+.overview button:disabled {
+  cursor: default;
+  background-color: rgba(13, 104, 109, 1);
+  color: var(--clr-very-dark-cyan);
+  opacity: 0.35;
+}
+
+@media screen and (min-width: 500px) {
+  #app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  section {
+    border-radius: 25px;
+  }
+
+  .tips-grid {
+    grid-template-rows: 48px 48px;
+    grid-template-columns: 117px 117px 117px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    margin: 0;
+    margin-bottom: 2rem;
+  }
+  section {
+    display: flex;
+  }
+
+  .calculations {
+    padding: 1.9rem 0rem 0rem 2rem;
+  }
+
+  .tip {
+    margin-top: 1.7rem;
+  }
+
+  .people {
+    margin-top: 1.7rem;
+  }
+
+  .overview {
+    min-width: 413px;
+
+    margin: 1.4rem 1.4rem 0rem 1.9rem;
+    padding-top: 1.7rem;
+  }
+
+  .overview button {
+    margin-top: 4.8rem;
+  }
+
+  .amount span {
+    font-size: 48px;
+    letter-spacing: -1px;
+  }
+}
