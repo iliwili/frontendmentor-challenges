@@ -1,0 +1,11 @@
+h1 {
+  font-family: var(--ff-fraunces);
+}
+
+p {
+  font-family: var(--ff-barlow);
+}
+
+a {
+  font-family: var(--ff-barlow);
+}
